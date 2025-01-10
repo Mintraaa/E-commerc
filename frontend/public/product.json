@@ -1,0 +1,10 @@
+[
+  {
+    "_id": 1,
+    "name": "Coding Keyboard",
+    "description": "Mechanical Keyboard optimized for Coding with customizable keycaps",
+    "price": 3500,
+    "image": "https://picsum.photos/200",
+    "category": "clothing"
+  }
+]
