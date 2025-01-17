@@ -1,35 +1,33 @@
 import React, { useState } from "react";
-
 const serviceList = [
   {
     id: 1,
-    title: "High Quality Products",
-    description: "We offer top-quality products for tech enthusiasts.",
+    title: "High-Quality Products",
+    description: "We offer a curated selection of high-quality products.",
     image: "/images/home/services/assurance.png",
   },
   {
     id: 2,
-    title: "Fast Delivery",
-    description: "Your orders delivered quickly to your doorstep.",
+    title: "Fast delivery",
+    description: "We deliver your order promptly door",
     image: "/images/home/services/fast-delivery.png",
   },
   {
     id: 3,
-    title: "Great Customer Support",
-    description: "Always here to assist you with any inquiries.",
+    title: "Online Ordering",
+    description: "Explore products & order with ease using our Online Ordering",
     image: "/images/home/services/order.png",
   },
   {
     id: 4,
-    title: "Affordable Prices",
-    description: "High-quality products at competitive prices.",
+    title: "Gift Cards",
+    description:
+      "Give the gift of exceptional products with SE Shop Gift Cards",
     image: "/images/home/services/gift.png",
   },
 ];
-
 const Service = () => {
   const [myServices, setMyServices] = useState(serviceList);
-
   return (
     <div className="section-container my-16">
       <div className="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -37,7 +35,7 @@ const Service = () => {
           <div className="text-left md:w-4/5">
             <p className="subtitle">Our Story & Services</p>
             <h2 className="title">Our Journey and Services</h2>
-            <p className="My-5">
+            <p className="my-5 text-secondary leading-[30px]">
               We provide a curated selection of high-quality tech-inspired
               products, backed by fast shipping and exceptional customer
               service. Our mission is to empower and inspire tech enthusiasts
@@ -52,19 +50,18 @@ const Service = () => {
         <div className="md:w-1/2">
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-8 item-center">
             {myServices.length > 0 &&
-              myServices.map((service) => (
-                <div key={service.id} className="shadow-md rounded p-4">
-                  <img
-                    src={service.image}
-                    alt=""
-                    className="w-full h-32 object-cover rounded"
-                  />
-                  <h3 className="text-lg font-semibold mt-4">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">{service.description}</p>
-                </div>
-              ))}
+              myServices.map((item) => {
+                return (
+                  <div
+                    key={item.id}
+                    className="shadow-md rounded-sm py-5 px-4 text-center space-y-2 text-red cursor-pointer hover:border hover:border-indigo-600 transition-all duration-200"
+                  >
+                    <img src={item.image} alt="" className="mx-auto h-16" />
+                    <h5 className="font-semibold">{item.title}</h5>
+                    <p className="text-[#907E7E]">{item.description}</p>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

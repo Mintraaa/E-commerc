@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 const categoryItems = [
   {
     id: 1,
@@ -8,7 +8,7 @@ const categoryItems = [
   },
   {
     id: 2,
-    title: "Accesorirs",
+    title: "Accessories",
     number: 12,
     image: "/images/home/category/img2.jpg",
   },
@@ -50,7 +50,7 @@ const Categories = () => {
                   />
                 </div>
                 <div className="mt-5 space-y-1">
-                  <h5 className="text-[#1E1E1E] front-semibold">
+                  <h5 className=" text-[#1E1E1E] font-semibold">
                     {item.title}
                   </h5>
                   <p className="text-secondary text-sm">

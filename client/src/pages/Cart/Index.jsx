@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Index = () => {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
-}
+  return <div>Cart Index</div>;
+};
 
-export default Index
+export default Index;
